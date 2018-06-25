@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  showSecret = false;
+  numberOfClicks = [];
 
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    // this.numberOfClicks.push(this.numberOfClicks.length + 1 );
+    this.numberOfClicks.push(new Date());
+
+  }
 }
