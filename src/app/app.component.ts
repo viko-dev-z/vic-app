@@ -16,4 +16,8 @@ export class AppComponent {
   //   this.numberOfClicks.push(new Date());
   //
   // }
+  loadedFeature = 'recipe';
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
