@@ -17,6 +17,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.component';
+import {CalendarModule} from 'angular-calendar';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.co
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CalendarModule.forRoot()
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
