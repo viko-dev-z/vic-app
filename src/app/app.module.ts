@@ -18,6 +18,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.component';
 import {CalendarModule} from 'angular-calendar';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {CalendarModule} from 'angular-calendar';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     CalendarModule.forRoot()
   ],
   providers: [ShoppingListService],

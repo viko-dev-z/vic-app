@@ -1,6 +1,17 @@
+<h3>
+  Announcements
+  <button
+    class="btn btn-primary center-block"
+    (click)="addAnnouncement()">
+    Add new Announcement
+  </button>
+  <div class="clearfix"></div>
+</h3>
+<hr>
 <mwl-calendar-month-view
   [viewDate]="viewDate"
   [events]="events"
+  [refresh]="refresh"
   [activeDayIsOpen]="activeDayIsOpen"
   (dayClicked)="dayClicked($event.day)">
 </mwl-calendar-month-view>

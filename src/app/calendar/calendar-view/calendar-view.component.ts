@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { isSameDay, isSameMonth } from 'date-fns';
 import { colors } from './event-colors';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-calendar-view',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './calendar-view.component.html',
   styleUrls: ['./calendar-view.component.css']
 })
 export class CalendarViewComponent implements OnInit {
-
+  refresh: Subject<any> = new Subject();
+  activeDayIsOpen: boolean;
   viewDate: Date = new Date();
   events: CalendarEvent[] = [
     {
@@ -18,10 +21,8 @@ export class CalendarViewComponent implements OnInit {
       color: colors.red
     }
   ];
-  activeDayIsOpen: boolean;
 
   constructor() { }
-
   ngOnInit() {
   }
 
@@ -37,6 +38,15 @@ export class CalendarViewComponent implements OnInit {
         this.viewDate = date;
       }
     }
+  }
+
+  addAnnouncement(): void  {
+    this.events.push({
+        start: new Date(),
+        title: 'An event',
+        color: colors.red
+      });
+    this.refresh.next();
   }
 
 }
