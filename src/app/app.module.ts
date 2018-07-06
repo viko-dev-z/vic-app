@@ -19,6 +19,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.component';
 import {CalendarModule} from 'angular-calendar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CalendarHeaderComponent } from './calendar/calendar-header/calendar-header.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     DropdownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
-    CalendarViewComponent
+    CalendarViewComponent,
+    CalendarHeaderComponent
   ],
   imports: [
     BrowserModule,

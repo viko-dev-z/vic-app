@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
-import { CalendarEvent } from 'angular-calendar';
+import { CalendarEvent} from 'angular-calendar';
 import { isSameDay, isSameMonth } from 'date-fns';
 import { colors } from './event-colors';
 import {Subject} from 'rxjs';
@@ -13,6 +13,7 @@ import {Subject} from 'rxjs';
 export class CalendarViewComponent implements OnInit {
   refresh: Subject<any> = new Subject();
   activeDayIsOpen: boolean;
+  view: string = 'month';
   viewDate: Date = new Date();
   events: CalendarEvent[] = [
     {
