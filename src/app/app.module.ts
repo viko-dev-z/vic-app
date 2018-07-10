@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms' ;
+import { ReactiveFormsModule, FormsModule } from '@angular/forms' ;
 // import {ServerComponent} from './server/server.component';
 // import { ServersComponent } from './servers/servers.component';
 import {HeaderComponent} from './header/header.component';
@@ -20,6 +20,9 @@ import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.co
 import {CalendarModule} from 'angular-calendar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CalendarHeaderComponent } from './calendar/calendar-header/calendar-header.component';
+import { CalendarHomeComponent } from './calendar/calendar-home/calendar-home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CalendarModalComponent } from './calendar/calendar-modal/calendar-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +38,18 @@ import { CalendarHeaderComponent } from './calendar/calendar-header/calendar-hea
     RecipeStartComponent,
     RecipeEditComponent,
     CalendarViewComponent,
-    CalendarHeaderComponent
+    CalendarHeaderComponent,
+    CalendarHomeComponent,
+    CalendarModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CalendarModule.forRoot()
+    CalendarModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

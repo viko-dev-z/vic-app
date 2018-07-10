@@ -6,6 +6,7 @@ import {RecipeStartComponent} from './recipes/recipe-start/recipe-start.componen
 import {RecipeDetailComponent} from './recipes/recipe-detail/recipe-detail.component';
 import {RecipeEditComponent} from './recipes/recipe-edit/recipe-edit.component';
 import {CalendarViewComponent} from './calendar/calendar-view/calendar-view.component';
+import {CalendarHomeComponent} from './calendar/calendar-home/calendar-home.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
@@ -16,7 +17,7 @@ const appRoutes: Routes = [
       {path: ':id/edit', component: RecipeEditComponent }
     ]},
   { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'calendar', component: CalendarViewComponent }
+  { path: 'calendar', component: CalendarHomeComponent }
 ];
 
 @NgModule({
